@@ -8,6 +8,7 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Thanks from "./Thanks";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/thanks" component={Thanks} />
+        <Footer />
       </BrowserRouter>
     </div>
   );

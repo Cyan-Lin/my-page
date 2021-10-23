@@ -1,33 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
 const About = () => {
-  const aboutRef = useRef(null);
-  let aboutItems;
-  let closeButton;
-
-  useEffect(() => {
-    aboutItems = aboutRef.current.querySelectorAll(".about__item");
-    closeButton = aboutRef.current.querySelector(".btn--close");
-  }, []);
-
-  const onAboutClick = (e) => {
-    if (!e.target.closest(".about__item")) return;
-
-    aboutItems.forEach((item) => item.classList.remove("active"));
-    const clickedItem = e.target.closest(".about__item");
-    aboutRef.current.classList.add("active");
-    closeButton.classList.add("active");
-    clickedItem.classList.add("active");
-  };
-
-  const onCloseClick = () => {
-    aboutRef.current.classList.remove("active");
-    closeButton.classList.remove("active");
-    aboutItems.forEach((item) => item.classList.remove("active"));
-  };
-
   return (
-    <div ref={aboutRef} onClick={onAboutClick} className="about">
+    <div className="about">
       <div className="about__container">
         <h2 className="heading-secondary text-center">About</h2>
         <div className="about__text-container">
