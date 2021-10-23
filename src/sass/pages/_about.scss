@@ -57,7 +57,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 8rem 2.5rem 8rem 2.5rem;
+      padding: 8rem 3.5rem;
+    }
+
+    @include respondMax($bp-smallest) {
+      padding: 8rem 2.5rem;
     }
   }
 
