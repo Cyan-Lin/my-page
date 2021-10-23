@@ -42,3 +42,5 @@ export const PORTFOLIO = {
 };
 
 export const NAV_LINKS = ["", "About", "Skills", "Portfolio", "Contact"];
+
+export const DOMAIN_NAME = "https://cywebsite.netlify.app";

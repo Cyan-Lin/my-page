@@ -1,6 +1,9 @@
 import React from "react";
 
+import { DOMAIN_NAME } from "../config";
+
 const Contact = () => {
+  console.log(process.env.NODE_ENV);
   return (
     <div className="contact">
       <div className="contact__form-box">
@@ -49,11 +52,7 @@ const Contact = () => {
             </label>
           </div>
           <input type="hidden" name="_subject" value="New submission!" />
-          <input
-            type="hidden"
-            name="_next"
-            value="http://localhost:3000/thanks"
-          />
+          <input type="hidden" name="_next" value={`${DOMAIN_NAME}/thanks`} />
           <div className="contact__input-box">
             <button className="btn btn--inline">Send</button>
           </div>
