@@ -11,6 +11,9 @@
     ),
     url("../../images/about.jpg");
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.active {
     & .about__item {
@@ -45,7 +48,7 @@
       padding: 6rem 4rem;
     }
 
-    @include respondMax($bp-smallest) {
+    @include respondMax($bp-medium) {
       position: relative;
       top: unset;
       left: unset;
