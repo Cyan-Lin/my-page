@@ -1,0 +1,198 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  // font-family: "Rampart One", sans-serif;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+      to right,
+      rgba(#212529, 0.75),
+      rgba(#212529, 0.75)
+    ),
+    url("../../images/about.jpg");
+  background-size: cover;
+
+  &.active {
+    & .about__item {
+      & .btn--about {
+        transform: scale(0);
+      }
+
+      & .about__detail {
+        transform: scale(0);
+      }
+    }
+
+    & .about__item.active {
+      & .btn--about {
+        transform: scale(0);
+      }
+
+      & .about__detail {
+        transform: scale(1);
+        transition-delay: 0.3s;
+      }
+    }
+  }
+
+  &__container {
+    @include absCenter;
+    transform: translate(-50%, -45%);
+    width: 75rem;
+
+    @include respondMax($bp-large) {
+      width: 100%;
+      padding: 0 4rem;
+    }
+
+    @include respondMax($bp-smallest) {
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 2.5rem;
+    }
+  }
+
+  &__item-container {
+    display: flex;
+    padding: 20rem 0;
+  }
+
+  &__item {
+    flex: 0 0 33.33333%;
+    text-align: center;
+  }
+
+  &__detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: scale(0);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &__circle {
+    border-radius: 50%;
+
+    &--main {
+      @include absCenter;
+      width: 10rem;
+      height: 10rem;
+      background-color: var(--color-primary);
+      animation: mainRotate 30s linear infinite;
+
+      &::before {
+        content: "About Me";
+        @include absCenter;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.8rem;
+        color: var(--color-grey-light-1);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: mainBeforeRotate 30s linear infinite;
+      }
+    }
+
+    &--side {
+      @include absCenter;
+      // width: 3rem;
+      // height: 3rem;
+      // background-color: var(--color-primary-light);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15rem;
+        height: 15rem;
+        font-size: 4rem;
+        font-family: "Open Sans", sans-serif;
+        background-color: var(--color-primary-light);
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotateZ(0);
+
+        &::before {
+          content: "diligent";
+          transform: translate(-50%, -30rem) rotateZ(0);
+          animation: scaleUpAndScaleDown1 30s linear infinite;
+        }
+      }
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%) rotateZ(72deg);
+
+        &::before {
+          content: "one";
+          transform: translate(-50%, -30rem) rotateZ(-72deg);
+          animation: scaleUpAndScaleDown2 30s linear infinite;
+        }
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, -50%) rotateZ(calc(72deg * 2));
+        &::before {
+          content: "one";
+          transform: translate(-50%, -30rem) rotateZ(calc(-72deg * 2));
+          animation: scaleUpAndScaleDown3 30s linear infinite;
+        }
+      }
+
+      &:nth-child(4) {
+        transform: translate(-50%, -50%) rotateZ(calc(72deg * 3));
+        &::before {
+          content: "one";
+          transform: translate(-50%, -30rem) rotateZ(calc(-72deg * 3));
+          animation: scaleUpAndScaleDown4 30s linear infinite;
+        }
+      }
+
+      &:nth-child(5) {
+        transform: translate(-50%, -50%) rotateZ(calc(72deg * 4));
+        &::before {
+          content: "one";
+          transform: translate(-50%, -30rem) rotateZ(calc(-72deg * 4));
+          animation: scaleUpAndScaleDown5 30s linear infinite;
+        }
+      }
+    }
+  }
+
+  &__text-container {
+    padding: 5rem 0;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid var(--color-grey-dark-4);
+    hyphens: auto;
+
+    @include respondMax($bp-large) {
+      columns: 1;
+      hyphens: none;
+    }
+  }
+}

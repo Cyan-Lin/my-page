@@ -1,0 +1,51 @@
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin animationScale {
+  animation: scaleUpAndScaleDown 2s linear infinite;
+}
+
+@mixin animationScaleSet($animation-name, $multiplier) {
+  @keyframes #{$animation-name} {
+    0% {
+      transform: translate(-50%, -25rem) rotateZ(calc(-72deg * $multiplier))
+        scale(1);
+    }
+
+    25% {
+      transform: translate(-50%, -25rem) rotateZ(calc(-72deg * $multiplier))
+        scale(1.2);
+    }
+
+    50% {
+      transform: translate(-50%, -25rem) rotateZ(calc(-72deg * $multiplier))
+        scale(1);
+    }
+
+    75% {
+      transform: translate(-50%, -25rem) rotateZ(calc(-72deg * $multiplier))
+        scale(0.8);
+    }
+
+    100% {
+      transform: translate(-50%, -25rem) rotateZ(calc(-72deg * $multiplier))
+        scale(1);
+    }
+  }
+}
+
+$bp-largest: 1200px;
+$bp-large: 800px;
+$bp-medium: 600px;
+$bp-small: 500px;
+$bp-smallest: 350px;
+
+@mixin respondMax($breakpoint) {
+  @media only screen and (max-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}

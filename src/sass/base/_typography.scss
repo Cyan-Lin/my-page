@@ -1,0 +1,28 @@
+//
+.heading-secondary {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hatched {
+  position: relative;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    // top: 0;
+    right: 15%;
+    color: var(--color-primary);
+    z-index: -5;
+  }
+}

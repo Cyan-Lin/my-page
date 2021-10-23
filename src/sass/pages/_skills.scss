@@ -1,0 +1,129 @@
+.skills {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(#212529, 0.8),
+      rgba(#212529, 0.8)
+    ),
+    url("../../images/skills.jpg");
+  background-size: cover;
+
+  &__container {
+    @include absCenter;
+    transform: translate(-50%, -45%);
+    width: 80rem;
+
+    @include respondMax($bp-large) {
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 8rem;
+    }
+
+    @include respondMax($bp-smallest) {
+      padding: 8rem 0;
+    }
+  }
+
+  &__list-container {
+    display: grid;
+    // grid-template-rows: repeat(2, 20rem);
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 12rem 6rem;
+    margin-top: var(--large);
+
+    @include respondMax($bp-large) {
+      gap: 8rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:nth-child(1) {
+      &:hover {
+        &::before {
+          color: var(--color-orange);
+        }
+      }
+
+      & .btn--ripple::before {
+        background-color: var(--color-orange);
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        &::before {
+          color: var(--color-green-light);
+        }
+      }
+
+      & .btn--ripple:hover {
+        color: var(--color-grey-dark-1);
+      }
+
+      & .btn--ripple::before {
+        background-color: var(--color-green-light);
+      }
+    }
+    &:nth-child(3) {
+      &:hover {
+        &::before {
+          color: var(--color-green-dark);
+        }
+      }
+
+      & .btn--ripple::before {
+        background-color: var(--color-green-dark);
+      }
+    }
+    &:nth-child(4) {
+      &:hover {
+        &::before {
+          color: var(--color-purple);
+        }
+      }
+
+      & .btn--ripple::before {
+        background-color: var(--color-purple);
+      }
+    }
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      top: -5rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      // @include absCenter;
+      // transform: translate(-50%, calc(-50% - 10rem));
+      font-size: 3rem;
+      transition: all 0.3s;
+      white-space: nowrap;
+
+      @include respondMax($bp-large) {
+        // transform: translate(-50%, calc(-50% - 6rem));
+      }
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__name {
+    position: relative;
+    z-index: var(--z-5);
+  }
+}

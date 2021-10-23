@@ -1,0 +1,20 @@
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/variables";
+
+@import "sass/base/animations";
+@import "sass/base/base";
+@import "sass/base/typography";
+@import "sass/base/utilities";
+
+@import "sass/components/button";
+
+@import "sass/layout/content";
+@import "sass/layout/footer";
+@import "sass/layout/navigation";
+
+@import "sass/pages/home";
+@import "sass/pages/about";
+@import "sass/pages/contact";
+@import "sass/pages/skills";
+@import "sass/pages/portfolio";
+@import "sass/pages/thanks";

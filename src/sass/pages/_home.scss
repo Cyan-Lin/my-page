@@ -1,0 +1,101 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(#212529, 0.6),
+      rgba(#212529, 0.6)
+    ),
+    url("../../images/home.jpg");
+  background-size: cover;
+  position: relative;
+
+  &__container {
+    width: 60rem;
+    @include absCenter;
+    // transform: translate(-50%, -60%);
+    text-align: center;
+
+    @include respondMax($bp-medium) {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+
+  &__img-box {
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    background-image: url("../../images/profile.jpg");
+    background-size: cover;
+    border-radius: 50%;
+
+    animation: moveInBottom 1s;
+  }
+
+  &__text-list {
+    padding: 2rem;
+  }
+
+  &__text-item {
+    list-style: none;
+    font-size: 7rem;
+    cursor: default;
+    display: inline-block;
+    transition: all 1s linear;
+    // animation: bouncingText 0.4s;結束了之後 .active被消除 animation: jumpingText 2s;又會被觸發一次
+    animation: highJumpingText 2s;
+
+    position: relative;
+
+    @include respondMax($bp-medium) {
+      font-size: 5.5rem;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0s;
+    }
+    &:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(8) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(10) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(11) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(12) {
+      animation-delay: 0.3s;
+    }
+
+    &.active {
+      animation: bouncingText 0.4s;
+    }
+  }
+
+  &__sub-text {
+    font-size: 1.8rem;
+
+    animation: moveInLeft 1s;
+  }
+
+  &__action {
+    margin-top: var(--small);
+    display: inline-block;
+  }
+}
