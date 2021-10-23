@@ -15,6 +15,7 @@ const Navigation = ({ history, location: { pathname } }) => {
       link.classList.remove("active");
       if (link.dataset.pathname === pathname) link.classList.add("active");
     });
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   const renderNavLinks = () => {

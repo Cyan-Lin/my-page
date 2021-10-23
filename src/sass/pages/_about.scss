@@ -42,7 +42,7 @@
 
     @include respondMax($bp-large) {
       width: 100%;
-      padding: 0 4rem;
+      padding: 6rem 4rem;
     }
 
     @include respondMax($bp-smallest) {
@@ -54,7 +54,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 8rem 2.5rem;
+      padding: 8rem 2.5rem 4rem;
     }
   }
 
@@ -180,7 +180,7 @@
   }
 
   &__text-container {
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
 
   &__text {

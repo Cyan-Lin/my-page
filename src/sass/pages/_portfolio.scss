@@ -1,4 +1,5 @@
 .portfolio {
+  background-color: green;
   &__container {
     max-width: 150rem;
     padding: 6rem 0;
@@ -35,13 +36,12 @@
     overflow: hidden;
 
     @include respondMax($bp-medium) {
-      width: 40rem;
-      height: 27.5rem;
+      max-width: 40rem;
+      height: 28rem;
     }
 
     @include respondMax($bp-smallest) {
-      width: 37.5rem;
-      height: 27.5rem;
+      max-width: 34rem;
     }
 
     &:hover {

@@ -1,11 +1,11 @@
 import React from "react";
 
-import { PORTFOLIO } from "../config";
+import { PORTFOLIO } from "../../config";
 // import Portfolio from "../images/portfolio.jpg";
-import cyecommerce from "../images/cyecommerce.jpg";
-import cymap from "../images/cymap.jpg";
-import cynote from "../images/cynote.jpg";
-import cytravel from "../images/cytravel.jpg";
+import cyecommerce from "../../images/cyecommerce.jpg";
+import cymap from "../../images/cymap.jpg";
+import cynote from "../../images/cynote.jpg";
+import cytravel from "../../images/cytravel.jpg";
 
 import Card from "./Card";
 
