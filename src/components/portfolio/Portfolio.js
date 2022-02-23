@@ -6,11 +6,12 @@ import cyecommerce from "../../images/cyecommerce.jpg";
 import cymap from "../../images/cymap.jpg";
 import cynote from "../../images/cynote.jpg";
 import cytravel from "../../images/cytravel.jpg";
+import cyrestaurant from "../../images/cyrestaurant.jpg";
 
 import Card from "./Card";
 
 const Portfolio = () => {
-  const images = [cyecommerce, cymap, cynote, cytravel];
+  const images = [cyecommerce, cymap, cynote, cytravel, cyrestaurant];
   const renderCards = () => {
     return Object.keys(PORTFOLIO).map((key, i) => (
       <Card key={i} detail={PORTFOLIO[key]} imageSrc={images[i]} />

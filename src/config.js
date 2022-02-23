@@ -39,6 +39,13 @@ export const PORTFOLIO = {
     WEBSITE_URL: "https://cytravel.netlify.app",
     IMAGE_SRC: "../../images/cytravel.jpg",
   },
+  RESTAURANT: {
+    NAME: "CyRestaurant",
+    DESCRIPTION: "A restaurant website created by javascript, SCSS.",
+    GITHUB_URL: "https://github.com/Cyan-Lin/my-restaurant",
+    WEBSITE_URL: "https://cyrestaurant.netlify.app",
+    IMAGE_SRC: "../../images/cyrestaurant.jpg",
+  },
 };
 
 export const NAV_LINKS = ["", "About", "Skills", "Portfolio", "Contact"];

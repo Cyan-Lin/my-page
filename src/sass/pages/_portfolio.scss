@@ -18,29 +18,38 @@
   }
 
   &__card-container {
+    width: 110rem;
     margin-top: var(--small);
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    @include respondMax($bp-largest) {
+      justify-content: center;
+      flex-wrap: unset;
+      flex-direction: column;
+      width: auto;
+    }
   }
 
   &__card {
-    width: 52rem;
+    flex: 0 0 45%;
     height: 30rem;
-    margin: 1.5rem;
+    margin: 2.5%;
     border-radius: 3px;
 
     position: relative;
     overflow: hidden;
 
-    @include respondMax($bp-medium) {
-      max-width: 40rem;
-      height: 28rem;
+    @include respondMax($bp-largest) {
+      flex: unset;
+      width: 50rem;
+      margin: 3rem 0;
     }
 
-    @include respondMax($bp-smallest) {
-      max-width: 34rem;
+    @include respondMax($bp-small) {
+      width: 40rem;
+      height: 27.5rem;
     }
 
     &:hover {
@@ -112,6 +121,7 @@
   &__description {
     margin-top: var(--small);
     font-size: 1.4rem;
+    margin: 0 1rem;
   }
 
   &__action {

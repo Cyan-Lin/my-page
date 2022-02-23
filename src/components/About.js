@@ -8,18 +8,17 @@ const About = () => {
         <div className="about__text-container">
           <p className="about__text">
             I graduated with a bachelor degree in mechanical engineering from
-            NTUT, and I'm serving in the army now. The reason why I apply for
-            this position is that I'm interested in front-end engineering,
-            especially the layout and animation effects. I was once in an
-            independent study project that needed to show the data using
-            website. After referring to many online resources, somehow I was
-            fascinated by its infinite possibility. I even volunteered to take
-            over the job. Although the result was not very good due to lack of
-            time, I came up an idea of going into front-end field. By having
-            learned every day and created side projects since about four months
-            before graduation, I hope to exchange views with more people
-            passionate about web development, and additionally, sharpen my
-            skills.
+            NTUT. The reason why I apply for this position is that I'm
+            interested in front-end engineering, especially the layout and
+            animation effects. I was once in an independent study project that
+            needed to show the data using website. After referring to many
+            online resources, somehow I was fascinated by its infinite
+            possibility. I even volunteered to take over the job. Although the
+            result was not very good due to lack of time, I came up an idea of
+            going into front-end field. By having learned every day and created
+            side projects since about four months before graduation, I hope to
+            exchange views with more people passionate about web development,
+            and additionally, sharpen my skills.
           </p>
         </div>
       </div>
